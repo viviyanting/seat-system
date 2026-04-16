@@ -25,8 +25,6 @@ public interface SeatingChartRepository extends JpaRepository<SeatingChart, Inte
     List<SeatView> getAllSeats();
 }
 
-//WHERE s.floorNo = :floor
-
 
 
 

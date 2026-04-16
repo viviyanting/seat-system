@@ -29,34 +29,9 @@ public class FloorSeatController {
         return floorSeatService.getAllEmployees();
     }
 
-
-    //依樓層查詢
-//    @GetMapping("/floor/{floor}")
-//    public List<SeatingChart> getByFloor(@PathVariable Integer floor) {
-//        return floorSeatService.getSeatsByFloor(floor);
-//    }
-
     //佔用/釋放座位
     @PostMapping("/action")
     public ApiResponse action(@RequestBody SeatActionRequest req) {
         return floorSeatService.handleAction(req.getEmpId(), req.getSeatSeq());
     }
-
-
-    //指派座位
-//    @PostMapping("/assign")
-//    public ApiResponse assignSeat(
-//            @RequestParam String empId,
-//            @RequestParam Integer seatSeq
-//    ) {
-//        return floorSeatService.assignSeat(empId, seatSeq);
-//    }
-//
-//    //釋放座位
-//    @PostMapping("/release")
-//    public ApiResponse releaseSeat(
-//            @RequestParam String empId,
-//            @RequestParam Integer seatSeq) {
-//        return floorSeatService.releaseSeat(empId, seatSeq);
-//    }
 }
