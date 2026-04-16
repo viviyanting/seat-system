@@ -20,13 +20,11 @@
 - MySQL
 - Stored Procedure
 - Transaction 管理
-- 
 ### Frontend
 - Vue 3
 - JavaScript
 - Fetch API
 - CSS Grid
-
 ## 專案結構
 seat-system
 
@@ -53,8 +51,15 @@ POST /api/seats/action
 
 ## 執行方式
 ### Backend
+### Backend 設定
+請先複製設定檔：
+src/main/resources/application-example.yaml
+並重新命名為：application.yaml
+然後填入自己的資料庫帳號與密碼。
+
 cd backend 
 使用IntelliJ執行 SeatSystemApplication
+
 
 ### Frontend
 cd frontend
@@ -70,13 +75,21 @@ Backend 使用 IntelliJ 執行 SeatSystemApplication。
 
 ### 系統架構圖
 Vue UI
+
 ↓
+
 Spring Boot Controller
+
 ↓
+
 Service (Business Logic)
+
 ↓
+
 Repository
+
 ↓
+
 MySQL
 
 
