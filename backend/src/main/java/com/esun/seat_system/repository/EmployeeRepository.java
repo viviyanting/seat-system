@@ -11,4 +11,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, String> {
     @Procedure("release_seat")
     void releaseSeatProcedure(String p_emp_id);
 
+    Employee findByFloorSeatSeq(Integer seatSeq);
+
 }
